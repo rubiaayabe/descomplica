@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcionários - Gerente e Desenvolvedor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5">
+    <h1>Cadastro de Funcionários</h1>
+    <form id="formFuncionario" class="mb-3">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="idade" class="form-label">Idade</label>
+        <input type="number" class="form-control" id="idade" required>
+      </div>
+      <div class="mb-3">
+        <label for="cargo" class="form-label">Cargo (Gerente ou Desenvolvedor)</label>
+        <input type="text" class="form-control" id="cargo" required>
+      </div>
+      <div class="mb-3" id="campoDepartamento">
+        <label for="departamento" class="form-label">Departamento (somente para Gerente)</label>
+        <input type="text" class="form-control" id="departamento">
+      </div>
+      <div class="mb-3" id="campoLinguagem">
+        <label for="linguagem" class="form-label">Linguagem de Programação (somente para Desenvolvedor)</label>
+        <input type="text" class="form-control" id="linguagem">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="criarFuncionario()">Criar Funcionário</button>
+    </form>
+
+    <h2>Resultado:</h2>
+    <div id="resultado" class="p-3 bg-light"></div>
+
+    <h2>Erros:</h2>
+    <div id="erro" class="text-danger"></div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
